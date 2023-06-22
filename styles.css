@@ -1,0 +1,210 @@
+:root{
+    --principal: #0079FF;
+    --secundario: #5A96E3;
+    --tercero: #A1C2F1;
+    --titulo:'Titillium Web', sans-serif;
+    --fuente:'Public Sans', sans-serif;
+}
+html{
+    box-sizing: border-box; /* esto siempre hay que ponerlo para que cuando pongamosmarggen o padding no se vea afectado*/
+    font-size: 62.5%; /* ESTO ES PARA QUE 1 REM SEA IGUAL A 10PX*/
+}
+
+*,*:before, *:after{
+    box-sizing: inherit; /* Hereda del elemento padre que es el html*/
+}
+
+body{
+    font-family: var(--fuente);
+    margin: 0;
+    
+}
+.contenedor{
+    /* max-width: 120rem;
+    width: 90%; */
+    width: min(90%,120rem); /*ESTA LINEA ES LO MISMO QUE LAS DOS DE ARRIBA ,estamos diciendo que el tome el valor mas pequeno, cuando la pantalla mida menos de 1200 px la el contenedor medira el 90% de la pantalla y se centrara, pero cuando mida mas de 1200px, el contenedor solo medira 1200px y se centrara*/
+    margin: 0 auto;
+}
+/* ///////////////////// */
+.mapa{
+    background-image: url(World\ Map.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    display: grid;
+    place-items: center;
+}
+.header{
+    background-color: var(--principal);
+}
+.titulo{
+    height: 16rem;
+    font-size: 28px;
+    color: #F9F5F6;
+    /* padding: 10px; */
+    margin: 0;
+    text-align: center;
+    font-family: var(--fuente);
+    display: flex;
+    justify-content: center;
+    /* align-items: end; */
+    padding-top: 115px;
+    padding-bottom: 10px;
+    /* letter-spacing: 5px; */
+}
+.espacio{
+    margin: -16rem auto 0 auto;
+}
+
+.container{
+    -webkit-box-shadow: 0px 0px 39px 3px rgba(0,0,0,0.54);
+    -moz-box-shadow: 0px 0px 39px 3px rgba(0,0,0,0.54);
+    box-shadow: 0px 0px 39px 3px rgba(0,0,0,0.54);
+    height: 550px;
+    border-radius: 30px;
+    /* margin: -100px; */
+}
+.grid{
+    gap: 100px;
+    height: 450px;
+    padding-top:40px;
+    /* border: #0079FF; */
+
+}
+/* @media (width >= 720px ) {
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 0;
+    }
+} */
+.campos{
+    display: grid;
+    /* flex-direction: column; */
+    margin-bottom: 15px;
+    grid-template-columns: 25% 50% 25%;
+    place-items: center;
+}
+span{
+    font-size: 30px;
+    font-weight: 600;
+    
+}
+input{
+    width: 90%;
+    height: 50px;
+    border-radius: 5px;
+    border: solid .1px #ECECEC;
+    font-size: 23px;
+}
+@media (width < 712px ) {
+    input{
+        font-size: 18px;
+    }
+    span{
+        font-size: 20px;
+    }
+    
+}
+.contenedor_boton{
+    display: grid;
+    place-items: center;
+}
+.transferencia{
+    border-radius: 50%;
+    font-size: 35px;
+    background-color: transparent;
+    width: 50px;
+    padding: 5px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 10px;
+    border: solid .1px #ECECEC;
+    cursor: pointer;
+    color: #0079FF;
+}
+/* i{
+    color: #ECECEC;
+} */
+input::placeholder{
+    font-size: 23px;
+}
+input:focus{
+    outline: var(--principal);
+}
+.boton{
+    width: 100%;
+    background-color: var(--principal);
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    color: #F9F5F6;
+    font-size: 20px;
+    transition: .2s;
+    border-radius: 10px;
+}
+.boton:hover{
+    background-color: #2192FF;
+    transition: .2s;
+}
+img{
+    height: 10px;
+}
+
+select{
+    cursor: pointer;
+    width: 85%;
+    height: 50px;
+    border-radius: 5px;
+    border: solid .1px #ECECEC;
+    font-size: 18px;
+}
+select:focus{
+    outline: none;
+}
+
+.resultado{
+    display: none;
+}
+
+.resultado_texto{
+    font-size: 23px;
+}
+.cambio{
+    font-size: 25px;
+    padding: 13px;
+}
+@media (width < 712px ) {
+    .cambio{
+        font-size: 20px;
+    }
+}
+
+.footer{
+    background-color: var(--principal);
+    margin-top: 50px;
+    padding: 15spx 0;
+    display: grid;
+    place-items: center;
+}
+
+.redes{
+    margin-bottom: 0;
+}
+.redes_titulo{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#ECECEC;
+}
+.redes_enlace{
+    gap: 70px;
+    display: flex;
+    justify-content: center;
+}
+.enlace{
+    font-size: 45px;
+    color: #ECECEC;
+}
