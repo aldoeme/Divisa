@@ -6,12 +6,12 @@
     --fuente:'Public Sans', sans-serif;
 }
 html{
-    box-sizing: border-box; /* esto siempre hay que ponerlo para que cuando pongamosmarggen o padding no se vea afectado*/
-    font-size: 62.5%; /* ESTO ES PARA QUE 1 REM SEA IGUAL A 10PX*/
+    box-sizing: border-box; 
+    font-size: 62.5%; 
 }
 
 *,*:before, *:after{
-    box-sizing: inherit; /* Hereda del elemento padre que es el html*/
+    box-sizing: inherit; /
 }
 
 body{
@@ -20,14 +20,12 @@ body{
     
 }
 .contenedor{
-    /* max-width: 120rem;
-    width: 90%; */
-    width: min(90%,120rem); /*ESTA LINEA ES LO MISMO QUE LAS DOS DE ARRIBA ,estamos diciendo que el tome el valor mas pequeno, cuando la pantalla mida menos de 1200 px la el contenedor medira el 90% de la pantalla y se centrara, pero cuando mida mas de 1200px, el contenedor solo medira 1200px y se centrara*/
+    width: min(90%,120rem); 
     margin: 0 auto;
 }
 /* ///////////////////// */
 .mapa{
-    background-image: url(World\ Map.svg);
+    background-image: url(img/World\ Map.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,16 +40,13 @@ body{
     height: 16rem;
     font-size: 28px;
     color: #F9F5F6;
-    /* padding: 10px; */
     margin: 0;
     text-align: center;
     font-family: var(--fuente);
     display: flex;
     justify-content: center;
-    /* align-items: end; */
     padding-top: 115px;
     padding-bottom: 10px;
-    /* letter-spacing: 5px; */
 }
 .espacio{
     margin: -16rem auto 0 auto;
@@ -63,25 +58,15 @@ body{
     box-shadow: 0px 0px 39px 3px rgba(0,0,0,0.54);
     height: 550px;
     border-radius: 30px;
-    /* margin: -100px; */
 }
 .grid{
     gap: 100px;
     height: 450px;
     padding-top:40px;
-    /* border: #0079FF; */
-
 }
-/* @media (width >= 720px ) {
-    .grid{
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        gap: 0;
-    }
-} */
+
 .campos{
     display: grid;
-    /* flex-direction: column; */
     margin-bottom: 15px;
     grid-template-columns: 25% 50% 25%;
     place-items: center;

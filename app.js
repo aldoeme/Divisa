@@ -1,27 +1,3 @@
-// const moendaEl_one = document.querySelector("#moneda-uno");
-// const moendaEl_two = document.querySelector("#moneda-dos");
-// const cantidadEl_one = document.querySelector("#cantidad-uno");
-// const cantidadEl_two = document.querySelector("#cantidad-dos");
-// const cambioEl = document.querySelector("#cambio");
-// const taza = document.querySelector("#taza");
-
-
-// // fetch exchange and update the DOM
-// function calculate(){
-//     // console.log("funciono")
-
-//     const moneda_one = moendaEl_one.value;
-//     const moneda_two = moendaEl_two.value;
-// }
-
-// // eventos
-// moendaEl_one.addEventListener('change',calculate);
-// cantidadEl_one.addEventListener('input',calculate);
-// moendaEl_two.addEventListener('change',calculate);
-// cantidadEl_two.addEventListener('input',calculate);
-
-// calculate();
-
 const monedaEl_one = document.getElementById('moneda-uno');
 const monedaEl_two = document.getElementById('moneda-dos');
 const cantidadEl_one = document.getElementById('cantidad-uno');
@@ -29,8 +5,7 @@ const cantidadEl_two = document.getElementById('cantidad-dos');
 const cambioEl = document.getElementById('cambio');
 const tazaEl = document.getElementById('taza');
 
-
-// Fetch Exchange Rate and Update the DOM
+//llamado de api
 function calculate(){
     const moneda_one = monedaEl_one.value;
     const moneda_two = monedaEl_two.value;
@@ -48,7 +23,7 @@ function calculate(){
     
 }
 
-//Event listeners
+//Eventos
 monedaEl_one.addEventListener('change', calculate);
 cantidadEl_one.addEventListener('input', calculate);
 monedaEl_two.addEventListener('change', calculate);
